@@ -5,17 +5,18 @@ def extract_and_save_to_txt(caminho_arquivo, caminho_saida):
         header = pd.read_excel(caminho_arquivo, nrows=1, header=None).iloc[0].tolist()
         df = pd.read_excel(caminho_arquivo, header=None, names=header, skiprows=1)
         df['ID'] = df.index
-        data_list = [['ID', 'Titulo', 'Classe']] 
+        data_list = [['ID', 'Titulo', 'Conteudo', 'Classe']]  # Adiciona 'Conteudo' à lista
         for index, row in df.iterrows():
             row_id = row['ID']
             title = row['Titulo'] if not pd.isna(row['Titulo']) else ''
+            content = row['Noticia'] if not pd.isna(row['Noticia']) else ''  # Adiciona conteúdo da notícia
             title = title.replace('\n', '')
             classe = int(row['Classe']) if not pd.isna(row['Classe']) and row['Classe'] != '' else None
-            data_list.append([row_id, title, classe]) 
+            data_list.append([row_id, title, content, classe])  # Adiciona 'Conteudo' à lista
 
         with open(caminho_saida, 'w', encoding='utf-8') as output_file:
             for data_row in data_list:
-                output_file.write(f'ID: {data_row[0]} Titulo: {data_row[1]} Classe: {data_row[2]}\n') 
+                output_file.write(f'ID: {data_row[0]} Titulo: {data_row[1]} Conteudo: {data_row[2]} Classe: {data_row[3]}\n')  # Atualiza a linha de escrita
 
         return f"Extração e salvamento em {caminho_saida} concluídos com sucesso."
 
