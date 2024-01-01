@@ -3,6 +3,11 @@
 ## Descrição
 Este repositório contém um script em Python desenvolvido para extrair informações detalhadas de notícias de uma planilha Excel (xlsx) e salvar os resultados de maneira organizada em um arquivo de texto. O script utiliza a poderosa biblioteca pandas para manipulação eficiente de dados.
 
+### Estrutura do Diretório
+
+- A pasta **[Código Fonte de Redução de Palavras](./extract_info_notices/)** contém os inputs e outputs utilizados no projeto, assim como o próprio código-fonte.
+- Na pasta **[Script](./extract_info_notices/script/)**, você encontrará o código-fonte do projeto.
+
 ## Como Utilizar o Script
 
 ### Requisitos Prévios
@@ -34,6 +39,11 @@ O script incorpora tratamento para diversos tipos de erros, tais como não local
 
 ## Description
 This repository contains a Python script developed to extract detailed information from news in an Excel spreadsheet (xlsx) and save the results in an organized manner to a text file. The script utilizes the powerful pandas library for efficient data manipulation.
+
+### Folder Structure
+
+- The **[Words Stemmize Source Code](./extract_info_notices/)** folder contains the inputs and outputs used in the created project, as well as the source code itself.
+- In the **[Script](./extract_info_notices/script/)** folder, you will find the source code for the project.
 
 ## How to Use the Script
 
